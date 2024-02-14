@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Inventory System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Sistema de Inventario de Periódico :)</h1>
+        
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <h2>Status Inventario</h2>
+                <div class="form-group">
+                    <label for="cmyk-level">Niveles de Tinta CMYK:</label>
+                    <input type="number" id="cmyk-level" name="cmyk-level" class="form-control" value="0" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="plate-quantity">Cantidad Planchas:</label>
+                    <input type="number" id="plate-quantity" name="plate-quantity" class="form-control" value="0" readonly>
+                </div>
+                <button id="low-btn" class="btn btn-warning">Bajo Consumo</button>
+                <button id="high-btn" class="btn btn-danger">Alto Consumo</button>
+            </div>
+            
+            <div class="col-md-6">
+                <h2>Crear Orden</h2>
+                <form id="order-form">
+                    <div class="form-group">
+                        <label for="cmyk-order">Orden Tinta CMYK:</label>
+                        <input type="number" id="cmyk-order" name="cmyk-order" class="form-control" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="plate-order">Orden Planchas:</label>
+                        <input type="number" id="plate-order" name="plate-order" class="form-control" min="0" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Crear Orden</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2>Ordenes de Compra Actuales</h2>
+                <ul id="purchase-orders" class="list-group">
+                    <!-- Purchase orders will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
